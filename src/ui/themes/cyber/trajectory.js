@@ -72,6 +72,7 @@ export default class CyberTrajectory extends ui.view.CyberTheme.CyberTrajectoryU
         this.#enableExtend = enableExtend;
         this.boxParticle.visible = false;
         this.boxSpeed.visible = true;
+        this.scbSpeed.value = 800;
         this.btnSummary.visible = false;
         this.#trajectoryItems = [];
         this.#isEnd = false;
@@ -82,8 +83,8 @@ export default class CyberTrajectory extends ui.view.CyberTheme.CyberTrajectoryU
     }
 
     close() {
-        this.scbSpeed.value = 0;
-        this.speed = 0;
+        this.scbSpeed.value = 800;
+        this.speed = 800;
         this.#trajectoryItems.forEach(item => {
             item.removeSelf();
             item.destroy();
